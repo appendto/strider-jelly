@@ -40,7 +40,7 @@ module.exports = function(ctx, cb){
       
       if (req.post.tracebacks){
         for (var i = 0; i<req.post.tracebacks.length; i++){
-          ctx.striderMessage("\n\n[ERROR]" + req.post.tracebacks[i]);
+          ctx.striderMessage("\n\n[ERROR][JELLY]" + req.post.tracebacks[i]);
         }
       }
       res.writeHead(200)
@@ -53,7 +53,7 @@ module.exports = function(ctx, cb){
       console.log("[JELLY:Results]", req.post);// TODO Req params
       if (req.post.tracebacks){
         for (var i = 0; i<req.post.tracebacks.length; i++){
-          ctx.striderMessage("\n\n[ERROR]" + req.post.tracebacks[i]);
+          ctx.striderMessage("\n\n[ERROR][JELLY]" + req.post.tracebacks[i]);
         }
       }
       ctx.events.emit("testDone", req.post)
